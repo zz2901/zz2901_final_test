@@ -104,3 +104,24 @@ flu_like_7d[1:5,]
     ## 5   31788.335    state   fb-survey
 
 - match mask rate geo values, same time interval
+
+## load depression last 7day delphi survey
+
+``` r
+dep_7d<-read.csv("data/covidcast-fb-survey-smoothed_wdepressed_7d-2021-01-01-to-2022-11-27.csv")
+
+dep_7d[1:5,]
+```
+
+    ##   X geo_value                 signal time_value      issue lag    value
+    ## 1 0        ak smoothed_wdepressed_7d 2021-03-02 2021-03-17  15 13.39202
+    ## 2 1        al smoothed_wdepressed_7d 2021-03-02 2021-03-17  15 19.49949
+    ## 3 2        ar smoothed_wdepressed_7d 2021-03-02 2021-03-17  15 15.57635
+    ## 4 3        az smoothed_wdepressed_7d 2021-03-02 2021-03-17  15 12.30572
+    ## 5 4        ca smoothed_wdepressed_7d 2021-03-02 2021-03-17  15 12.14217
+    ##      stderr sample_size geo_type data_source
+    ## 1 3.2037806    113.0000    state   fb-survey
+    ## 2 1.8392737    464.0120    state   fb-survey
+    ## 3 2.1039358    297.0741    state   fb-survey
+    ## 4 1.3440028    597.4173    state   fb-survey
+    ## 5 0.6330344   2662.0873    state   fb-survey
