@@ -46,7 +46,7 @@ mask_5d[1:5,]
 mask_5d_unweighted <- read.csv("data/covidcast-fb-survey-smoothed_wearing_mask-2021-01-01-to-2022-11-27.csv")
 ```
 
-Sampling weights are non-negative values associated with survey responses that 
+* Sampling weights are non-negative values associated with survey responses that 
 usually exist in any publicly available survey data. Sampling weights are supposed to 
 be inversely proportional to the selection probabilities of sample units in the target 
 population, whose main goal is to improve the representativeness of the sample with 
@@ -56,4 +56,39 @@ based on CTIS data tends to overestimate vaccination rates among adult Facebook
 users. In the following section, we further explain why it is necessary to use the 
 sampling weights in our statistical analysis
 
+## load state people wearing mask last 7 days 
+
+```{r}
+mask_7d <- read.csv("data/covidcast-fb-survey-smoothed_wwearing_mask_7d-2021-01-01-to-2022-11-27.csv")
+```
+
+* maybe use 7 days data since corresponds with HHS data
+
+## load flu 7 day hhs
+
+```{r}
+flu_7d <- read.csv("data/covidcast-hhs-confirmed_admissions_influenza_1d_7dav-2021-01-01-to-2022-11-27.csv")
+
+flu_7d[1:5,]
+```
+
+* hhs geovalue; need reference
+
+## load flu like syptoms 7 day weighted state level from delphi survey
+
+```{r}
+flu_like_7d<-read.csv("data/covidcast-fb-survey-smoothed_wili-2021-01-01-to-2022-11-27.csv")
+
+flu_like_7d[1:5,]
+```
+
+* match mask rate geo values, same time interval
+
+## load depression last 7day delphi survey
+
+```{r}
+dep_7d<-read.csv("data/covidcast-fb-survey-smoothed_wdepressed_7d-2021-01-01-to-2022-11-27.csv")
+
+dep_7d[1:5,]
+```
 
